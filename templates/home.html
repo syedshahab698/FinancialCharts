@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block plot %}
+ <div id="chart" class="chart">
+ 	<script type="text/javascript">
+         
+        var graphs = {{graphJSON | safe}};
+        
+        Plotly.plot('chart',graphs,{});        
+ 
+    </script>
+    </div>
+  <!-- D3.js -->
+ 
+ 
+    
+{% endblock%}
